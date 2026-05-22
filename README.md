@@ -1,30 +1,31 @@
-# Html to css conversion
+# AI Extractive Ritual
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A live-coding concept piece: a [Strudel](https://strudel.cc) REPL wrapped in a triptych UI that frames AI as an extractive ritual.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/evan-schultzs-projects/v0-html-to-css-conversion)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/kPY9qFplk6c)
+**Live:** [claude-slutprint.ritualstack.ai](https://claude-slutprint.ritualstack.ai/)
 
-## Overview
+> Strip the soul → Wrap it in synthetic polish → Feed it back into the attention furnace → Repeat, faster.
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## What it does
 
-## Deployment
+The three panels — **Strip the Soul**, **Wrap in Synthetic Polish**, **Feed into the Attention Furnace** — sit above a live Strudel REPL. The patch is phase-tracked: a `phase` counter mutates the algorithmic soundtrack as the ritual progresses ("Electronic Insects at Dusk" and on). Hit **Start Visual Sync** to wire the audio to the visuals and live-code the music of the machine.
 
-Your project is live at:
+## Stack
 
-**[https://vercel.com/evan-schultzs-projects/v0-html-to-css-conversion](https://vercel.com/evan-schultzs-projects/v0-html-to-css-conversion)**
+- **Next.js 14** (App Router) + React 18 + TypeScript
+- **Strudel** — `@strudel/core`, `@strudel/mini`, `@strudel/repl`, `@strudel/webaudio`
+- **CodeMirror** (`@uiw/react-codemirror`) for the live editor
+- **Tailwind CSS** + shadcn/ui
+- Deployed on **Vercel**
 
-## Build your app
+## Development
 
-Continue building your app on:
+```bash
+pnpm install
+pnpm dev      # http://localhost:3000
+pnpm build
+```
 
-**[https://v0.dev/chat/projects/kPY9qFplk6c](https://v0.dev/chat/projects/kPY9qFplk6c)**
+## Origin
 
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Scaffolded with [v0.dev](https://v0.dev) and auto-synced from v0 deployments. Part of the float-ritual-stack constellation of graph/pattern music experiments.
