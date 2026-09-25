@@ -40,6 +40,9 @@ export function useStrudel() {
       setError(null)
       if (!repl.current) setStatus("loading")
       const r = await boot()
+      // initStrudel defers worklet loading to the *next* mousedown; this click
+      // already happened, so load them now or .shape()/.distort() events drop
+      await mod.current?.initAudio()
       await mod.current?.getAudioContext().resume()
       await r.evaluate(code, true)
       setStatus("playing")

@@ -7,4 +7,5 @@ declare module "@strudel/web" {
   }): Promise<unknown>
   export function samples(source: string): Promise<void>
   export function getAudioContext(): AudioContext
+  export function initAudio(options?: Record<string, unknown>): Promise<void>
 }
